@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas for XR Hackathon</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.9); /* Translucent dark header */
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+        .container {
+            margin: 30px auto;
+            max-width: 900px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85); /* Translucent white container */
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        button {
+            background-color: rgba(76, 175, 80, 0.8); /* Translucent green */
+            color: white;
+            padding: 12px 24px;
+            margin: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgba(76, 175, 80, 1);
+        }
+        h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            text-align: left;
+            margin: 15px 0;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+            color: #555;
+        }
+        li {
+            font-size: 1.1em;
+            margin: 8px 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showPage(page) {
+            document.getElementById("immersive-tourism").classList.add("hidden");
+            document.getElementById("educational-transformation").classList.add("hidden");
+            document.getElementById(page).classList.remove("hidden");
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Ideas for XR Hackathon</h1>
+    </header>
+
+    <div class="container">
+        <button onclick="showPage('immersive-tourism')">Immersive Tourism</button>
+        <button onclick="showPage('educational-transformation')">Educational Transformation</button>
+        
+        <!-- Immersive Tourism Section -->
+        <div id="immersive-tourism">
+            <h2>Immersive Tourism: AR Time Traveler - City Landmarks</h2>
+            <p><strong>Concept:</strong> Create an AR app that allows users to explore famous city landmarks, showing what they looked like in the past using AR overlays.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Overlay historical reconstructions on landmarks.</li>
+                <li>Pop-up info panels with historical facts and images.</li>
+                <li>GPS-based triggers to guide users around the city.</li>
+            </ul>
+            <p><strong>Tech Stack:</strong> ARCore/ARKit, Unity, Firebase, Google Maps API.</p>
+        </div>
+
+        <!-- Educational Transformation Section -->
+        <div id="educational-transformation" class="hidden">
+            <h2>Educational Transformation: AR STEM Learning Assistant</h2>
+            <p><strong>Concept:</strong> Build an AR app to help students learn complex STEM topics by visualizing them in 3D. Scan objects or textbooks to bring 3D models to life in AR.</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Show 3D models of molecules, physics simulations, or geometry.</li>
+                <li>Interactive elements (rotate models, change variables).</li>
+                <li>Optional quiz mode for students to engage with concepts.</li>
+            </ul>
+            <p><strong>Tech Stack:</strong> ARCore/ARKit, Unity, Firebase, Blender, Unity Physics Engine.</p>
+        </div>
+    </div>
+
+</body>
+</html>
